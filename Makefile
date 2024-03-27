@@ -32,6 +32,8 @@ $(BUILD_DIR)/combined.img: $(BUILD_DIR)/thirdstage.ext2 $(BUILD_DIR)/qhypstub.bi
 .PHONY: $(BUILD_DIR)/u-boot-nodtb.bin.gz $(BUILD_DIR)/qhypstub.bin $(BUILD_DIR)/lk2nd.img $(BUILD_DIR)/dtbs $(BUILD_DIR)/thirdstage.ext2
 
 $(BUILD_DIR)/thirdstage.ext2: $(BUILD_DIR)/u-boot-nodtb.bin.gz $(BUILD_DIR)/dtbs extlinux/extlinux.conf
+	@rm -rf $(BUILD_DIR)/thirdstage
+	@rm -f $@
 	@mkdir -p $(BUILD_DIR)/thirdstage
 	cp $(BUILD_DIR)/u-boot-nodtb.bin.gz $(BUILD_DIR)/thirdstage
 	mkdir -p $(BUILD_DIR)/thirdstage/dtbs/qcom
