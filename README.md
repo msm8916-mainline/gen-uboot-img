@@ -16,7 +16,7 @@ You can get a prebuilt package from [releases](https://github.com/msm8916-mainli
 
 Install `combined.img` into your `boot` partition:
 
- - Fastboot: `fastboot flash boot combined.img`
+ - Fastboot: `fastboot flash:raw boot combined.img`
  - Samsung: `heimdall flash --BOOT combined.img`
 
 ### Installation via existing lk2nd:
@@ -24,7 +24,7 @@ Install `combined.img` into your `boot` partition:
 ```
 fastboot flash lk2nd lk2nd.img
 fastboot flash qhypstub qhypstub.bin
-fastboot flash boot thirdstage.ext2
+fastboot flash:raw boot thirdstage.ext2
 ```
 
 ## Building
