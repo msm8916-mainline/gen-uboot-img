@@ -24,14 +24,14 @@ Install `combined.img` into your `boot` partition:
 ```
 fastboot flash lk2nd lk2nd.img
 fastboot flash qhypstub qhypstub.bin
-fastboot flash:raw boot thirdstage.ext2
+fastboot flash boot thirdstage.ext2
 ```
 
 ## Building
 
 You will need to collect a selection of projects to build the bootchain.
 
-- WIP lk2nd branch: `rebase/uboot` from [msm8916-mainline/lk2nd](https://github.com/msm8916-mainline/lk2nd)
+- WIP lk2nd branch: `rebase/next` from [msm8916-mainline/lk2nd](https://github.com/msm8916-mainline/lk2nd)
 - Linux kernel: Latest branch from [msm8916-mainline/linux](https://github.com/msm8916-mainline/linux)
 - Linaro's Qcom Landing Team U-Boot tree: `caleb/rbx-integration` from [linaro/qcomlt/u-boot](https://git.codelinaro.org/linaro/qcomlt/u-boot)
 - qhypstub: [msm8916-mainline/qhypstub](https://github.com/msm8916-mainline/qhypstub)
