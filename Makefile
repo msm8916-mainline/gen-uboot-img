@@ -43,7 +43,7 @@ $(BUILD_DIR)/thirdstage.ext2: $(BUILD_DIR)/u-boot-nodtb.bin.gz $(BUILD_DIR)/dtbs
 
 $(BUILD_DIR)/u-boot-nodtb.bin.gz:
 	@mkdir -p $(dir $@)
-	$(MAKE) -C $(UBOOT_DIR) CROSS_COMPILE=$(CROSS_COMPILE) O=$(BUILD_DIR)/u-boot qcom_defconfig phone.config
+	$(MAKE) -C $(UBOOT_DIR) CROSS_COMPILE=$(CROSS_COMPILE) O=$(BUILD_DIR)/u-boot qcom_defconfig
 	$(MAKE) -C $(UBOOT_DIR) CROSS_COMPILE=$(CROSS_COMPILE) O=$(BUILD_DIR)/u-boot u-boot-nodtb.bin
 	gzip -9 -c $(BUILD_DIR)/u-boot/u-boot-nodtb.bin > $@
 
